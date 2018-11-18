@@ -3,13 +3,15 @@ import Card from './Card';
 import escapeRegExp from 'escape-string-regexp';
 import $ from 'jquery';
 import './sass/style.scss';
-
+import logo from './img/logo.svg';
+import hamburger from './img/hamburger.svg';
 
 class Grid extends Component {
     state = {
         cards: [],
         apiHits:0,
         totalLikes:0,
+        sorting:'ratings',
         query:'',
     }
 
@@ -48,7 +50,6 @@ class Grid extends Component {
             // parse the localStorage string and setState
             try {
               value = JSON.parse(value);
-              console.log(value);
               this.setState({ [key]: value });
             } catch (e) {
               // handle empty string
@@ -62,7 +63,6 @@ class Grid extends Component {
         const {cards} = this.state;
         let card;
         let apiHits = 0;
-        //let self = this;
         const url = `http://www.mocky.io/v2/5bdd28dd32000075008c6227`;
 
         //fetch data from foursquare
@@ -84,7 +84,9 @@ class Grid extends Component {
             this.totalLikes(cards);
             this.hydrateStateWithLocalStorage();
             })
-        })
+        }).catch((error) => {
+            console.log('API Not Responding')
+        });
 
     }
 
@@ -119,24 +121,40 @@ class Grid extends Component {
         this.setState({query: query})
     }
 
+    updateSorting = (sorting) => {
+        this.setState({sorting: sorting})
+    }
+
+    sortCards = (sorting,cards) => {
+        let sortedCards;
+        sortedCards = cards.sort(function(obj1, obj2) {
+        	return obj2[sorting] - obj1[sorting];
+        });
+        return sortedCards;
+    }
+
     filterCards = (query, cards) => {
-        let newPlaces;
+        let newCards;
         if (query){
             const match = new RegExp(escapeRegExp(query),'i');
-            newPlaces = cards.filter((card)=>match.test(card.name));
+            newCards = cards.filter((card)=>match.test(card.name));
         }
         else{
-          newPlaces = cards;
+          newCards = cards;
         }
-        console.log(newPlaces);
-        return newPlaces;
+        return newCards;
     }
 
     render() {
-        const {query,cards} = this.state;
+        const {query,sorting,cards} = this.state;
         let searchedPlaces = this.filterCards(query, cards);
+        let finalPlaces = this.sortCards(sorting, searchedPlaces);
         return (
             <div className="main">
+                <div className="branding">
+                    <img src={logo} alt="logo" />
+                    <img src={hamburger} className="hamburger" alt="hamburger" />
+                </div>
                 <header>
                     <div className="head-content">
                         <div className="searchBar">
@@ -152,9 +170,12 @@ class Grid extends Component {
                         </div>
                         <div className="filter">
                             <p> Sort By :
-                            <select>
-                            <option values="ratings"> Ratings </option>
-                            <option value="likes"> Likes </option>
+                            <select
+                            value={sorting}
+                            onChange={(event) => this.updateSorting(event.target.value)}
+                            >
+                            <option value='ratings'> Ratings </option>
+                            <option value='likes'> Likes </option>
                             </select>
                             </p>
                         </div>
@@ -163,7 +184,7 @@ class Grid extends Component {
                 </header>
                 <div className="grid" role="grid">
                     <ul className="cards-list">
-                        {searchedPlaces.map((card) =>
+                        {finalPlaces.map((card) =>
                             <Card
                                 key = {card.id}
                                 card = {card}
