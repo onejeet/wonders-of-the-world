@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/wonders-of-the-world-react/static/media/hamburger.86595150.svg"
   },
   {
-    "revision": "8f49da55183b5d825482",
+    "revision": "bd322e2f889681a69678",
     "url": "/wonders-of-the-world-react/static/css/main.dd6244c9.chunk.css"
   },
   {
@@ -24,16 +24,16 @@ self.__precacheManifest = [
     "url": "/wonders-of-the-world-react/static/media/logo.1d16aea1.svg"
   },
   {
-    "revision": "8f49da55183b5d825482",
-    "url": "/wonders-of-the-world-react/static/js/main.8f49da55.chunk.js"
-  },
-  {
-    "revision": "fee66e712a8a08eef5805a46892932ad",
-    "url": "/wonders-of-the-world-react/static/media/fontawesome-webfont.fee66e71.woff"
+    "revision": "bd322e2f889681a69678",
+    "url": "/wonders-of-the-world-react/static/js/main.bd322e2f.chunk.js"
   },
   {
     "revision": "af7ae505a9eed503f8b8e6982036873e",
     "url": "/wonders-of-the-world-react/static/media/fontawesome-webfont.af7ae505.woff2"
+  },
+  {
+    "revision": "fee66e712a8a08eef5805a46892932ad",
+    "url": "/wonders-of-the-world-react/static/media/fontawesome-webfont.fee66e71.woff"
   },
   {
     "revision": "674f50d287a8c48dc19ba404d20fe713",
@@ -48,7 +48,7 @@ self.__precacheManifest = [
     "url": "/wonders-of-the-world-react/static/css/1.6e6af794.chunk.css"
   },
   {
-    "revision": "5529ddbe9c50c8ec50bbd0c76e7ebb5a",
+    "revision": "034208ba63975ed3ea306e3bfb1bc06d",
     "url": "/wonders-of-the-world-react/index.html"
   }
 ];
