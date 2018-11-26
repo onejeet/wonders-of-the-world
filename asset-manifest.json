@@ -1,7 +1,7 @@
 {
   "main.css": "/wonders-of-the-world-react/static/css/main.be7c725f.chunk.css",
-  "main.js": "/wonders-of-the-world-react/static/js/main.43b14971.chunk.js",
-  "main.js.map": "/wonders-of-the-world-react/static/js/main.43b14971.chunk.js.map",
+  "main.js": "/wonders-of-the-world-react/static/js/main.75decd94.chunk.js",
+  "main.js.map": "/wonders-of-the-world-react/static/js/main.75decd94.chunk.js.map",
   "static/css/1.0446dc1a.chunk.css": "/wonders-of-the-world-react/static/css/1.0446dc1a.chunk.css",
   "static/js/1.6b5cc2b8.chunk.js": "/wonders-of-the-world-react/static/js/1.6b5cc2b8.chunk.js",
   "static/js/1.6b5cc2b8.chunk.js.map": "/wonders-of-the-world-react/static/js/1.6b5cc2b8.chunk.js.map",
@@ -12,6 +12,6 @@
   "static/css/main.be7c725f.chunk.css.map": "/wonders-of-the-world-react/static/css/main.be7c725f.chunk.css.map",
   "static/css/1.0446dc1a.chunk.css.map": "/wonders-of-the-world-react/static/css/1.0446dc1a.chunk.css.map",
   "index.html": "/wonders-of-the-world-react/index.html",
-  "precache-manifest.cdd886fcdb8d709db64398f636341ad4.js": "/wonders-of-the-world-react/precache-manifest.cdd886fcdb8d709db64398f636341ad4.js",
+  "precache-manifest.7cc84ac0d5fbd9d04cda4130c8fbde7c.js": "/wonders-of-the-world-react/precache-manifest.7cc84ac0d5fbd9d04cda4130c8fbde7c.js",
   "service-worker.js": "/wonders-of-the-world-react/service-worker.js"
 }

@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/wonders-of-the-world-react/precache-manifest.cdd886fcdb8d709db64398f636341ad4.js"
+  "/wonders-of-the-world-react/precache-manifest.7cc84ac0d5fbd9d04cda4130c8fbde7c.js"
 );
 
 workbox.clientsClaim();
