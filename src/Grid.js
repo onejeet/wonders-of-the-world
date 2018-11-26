@@ -63,7 +63,7 @@ class Grid extends Component {
         const {cards} = this.state;
         let card;
         let apiHits = 0;
-        const url = `http://www.mocky.io/v2/5bdd28dd32000075008c6227`;
+        const url = `https://www.mocky.io/v2/5bdd28dd32000075008c6227`;
 
         //fetch data from foursquare
         fetch(url)
