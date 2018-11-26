@@ -3,7 +3,7 @@ import Card from './Card';
 import escapeRegExp from 'escape-string-regexp';
 import $ from 'jquery';
 import './sass/style.scss';
-import logo from './img/logo.svg';
+import logo from './img/logo.png';
 import hamburger from './img/hamburger.svg';
 
 class Grid extends Component {
